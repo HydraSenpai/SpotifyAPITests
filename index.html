@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Web API</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="app.js"></script>
+
+</head>
+<body onload="onPageLoad()">
+    <div id="container">
+        <div id="tokenSection" class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="clientId" class="form">Client ID</label>
+                    <input type="text" class="form-control" id="clientId" placeholder="">
+                </div>    
+                <div class="mb-3">
+                    <label for="clientSecret" class="form">Client Secret</label>
+                    <input type="text" class="form-control" id="clientSecret" placeholder="">
+                </div>
+                <input type="button" class="btn btn-primary" onclick="requestAuthorization()" value="Request Authorisation">
+            </div>
+        </div>
+
+        <div id="deviceSection" class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="devices" id="form-label">Devices</label>
+                    <select id="devices" class="form-control"></select>
+                    <input type="button" class="btn btn-primary" onclick="refreshDevices()" value="Refresh Devices">
+                </div>
+            </div>
+        </div>
+
+        <div id="playlistSection" class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="playlists" id="form-label">Playlists</label>
+                    <select id="playlists" class="form-control"></select>
+                    <input type="button" class="btn btn-primary" onclick="getPlaylists()" value="Fetch Playlists">
+                </div>
+            </div>
+        </div>
+
+        <div id="playlistSection" class="row">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="playlists" id="form-label">Player</label>
+                    <input type="text" class="form-control" id="songName" placeholder="">
+                    <div class="Functionbuttons">
+                        <input type="button" class="btn btn-primary" onclick="goBack()" value="<">
+                        <input type="button" class="btn btn-primary" onclick="playSong()" value="|>">
+                        <input type="button" class="btn btn-primary" onclick="pauseSong()" value="||">
+                        <input type="button" class="btn btn-primary" onclick="goForward()" value=">">
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
